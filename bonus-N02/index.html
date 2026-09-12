@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang='ja'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='robots' content='noindex, nofollow, noarchive'><title>第二の脳 Obsidian 初期設定テンプレ ── わど式 AIマネタイズ 特典｜セミナー参加特典</title><style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;font-size:16px;line-height:1.8;letter-spacing:.04em;color:var(--text);background:var(--bg)}
+a{color:var(--link)}img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.site{padding:40px 0 28px;color:#fff;background:var(--hero)}
+header.site h1{margin:0 0 6px;font-size:28px;line-height:1.3}
+header.site p{margin:0;opacity:.9;font-size:15px}
+.stamp{display:inline-block;font-size:12px;letter-spacing:.2em;padding:3px 10px;border:1px solid rgba(255,255,255,.6);border-radius:999px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;padding:28px 0 40px}
+.card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid var(--border)}
+.card .ph{aspect-ratio:16/9;background:var(--ph);display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px;font-weight:800;letter-spacing:.06em}
+.card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--tagbg);color:var(--tagfg);white-space:nowrap}
+.tag.k{background:var(--accent);color:#fff}
+.card h2{font-size:17px;margin:0;line-height:1.45}
+.card p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+.btn{display:inline-block;text-align:center;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;color:#fff;background:var(--btn)}
+.btn.dis{background:var(--muted);pointer-events:none}
+.btn.ghost{background:transparent;color:var(--link);border:1px solid var(--border)}
+article{padding:28px 0 48px}
+article .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:24px}
+@media(min-width:760px){article .hero{grid-template-columns:1.1fr 1fr;align-items:center}}
+article h1{font-size:26px;line-height:1.35;margin:8px 0}
+article .lead{color:var(--muted);margin:0 0 12px}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:0 0 24px}
+.toc b{display:block;margin-bottom:6px}.toc ul{margin:0;padding-left:18px}.toc li{margin:2px 0;font-size:14px}
+.body h2{font-size:20px;margin:36px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+.body h3{font-size:17px;margin:24px 0 8px}
+.body table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+.body th{background:var(--accent);color:#fff;text-align:left;padding:6px 8px}
+.body td{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+.body pre{background:var(--pre);padding:12px;border-radius:8px;overflow-x:auto;font-size:13.5px;white-space:pre-wrap}
+.body code{background:var(--pre);padding:1px 5px;border-radius:4px;font-size:.92em}
+.body blockquote{margin:12px 0;padding:8px 14px;border-left:4px solid var(--accent);background:var(--card)}
+.tbl{overflow-x:auto}
+.pending{background:var(--card);border:1px dashed var(--border);border-radius:12px;padding:24px;text-align:center;color:var(--muted)}
+nav.pn{display:flex;justify-content:space-between;gap:12px;margin:36px 0 0;padding-top:18px;border-top:1px solid var(--border);font-size:14px}
+nav.pn a{max-width:48%}nav.pn span{color:var(--muted)}
+footer.site{padding:24px 0 40px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--border)}
+footer.site p{margin:4px 0}
+.crumb{font-size:13px;margin:16px 0 0}.crumb a{text-decoration:none}
+.sec{padding:26px 0 6px;border-top:1px solid var(--border)}
+.sec:first-of-type{border-top:0;padding-top:20px}
+.sec>h2{font-size:20px;margin:0 0 4px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+.sec>p{margin:0;font-size:13.5px;color:var(--muted)}
+.sec .grid{padding:16px 0 12px}
+.linkcard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:18px 0 30px;box-shadow:var(--shadow)}
+.linkcard p{margin:0 0 12px;font-size:14px;color:var(--muted)}
+.lib{padding:8px 0 30px}
+.lib h3{font-size:16px;margin:22px 0 6px;padding-left:10px;border-left:4px solid var(--accent)}
+.lib .grid{padding:8px 0 16px}
+.lib .card h2{font-size:15px}.lib .card p{display:none}
+.lib .note{font-size:13px;color:var(--muted);margin:4px 0 0}
+
+:root{--bg:#f5f3ff;--card:#fff;--text:#374151;--muted:#6b7280;--link:#4f46e5;--border:#e5e7eb;--accent:#6366f1;--btn:linear-gradient(90deg,#6366f1,#a855f7);--hero:linear-gradient(120deg,#1e1b4b,#6366f1 60%,#a855f7);--ph:linear-gradient(135deg,#1e1b4b,#6366f1);--tagbg:#eef2ff;--tagfg:#4338ca;--shadow:0 8px 24px rgba(30,27,75,.08);--pre:#f3f4f6}
+</style></head><body>
+<header class='site'><div class='wrap'><span class='stamp'>WADO BONUS 2026</span><h1 style=font-size:20px>わど式 AIマネタイズ 特典｜セミナー参加特典</h1></div></header>
+<main class='wrap'><p class='crumb'><a href='../'>← 一覧へ戻る</a></p><article>
+<div class='hero'><div><div class='card'><div class='ph'>N02</div></div></div><div><div class='tags'><span class='tag k'>新規</span><span class='tag'>Setup</span><span class='tag'>Notion</span><span class='tag'>セミナー参加特典</span></div><h1>第二の脳 Obsidian 初期設定テンプレ</h1><p class='lead'>フォルダ・デイリーノート・AIに読ませる1枚を、コピーで作る</p><span class='tag' style='font-size:13px;padding:6px 12px'>このページが特典の本体です。下へスクロールして使ってください</span></div></div>
+<div class='toc'><b>目次</b><div class="toc">
+<ul>
+<li><a href="#_1">はじめに</a></li>
+<li><a href="#_2">この特典の進め方</a></li>
+<li><a href="#1">最初のゴール(今日やる1つ)</a></li>
+<li><a href="#1_1">1. 何を先に入れるか(順番と理由)</a></li>
+<li><a href="#2-1">2. 手順(画面ごとに1行・つまずきやすい所に注記)</a><ul>
+<li><a href="#2-1-obsidian">2-1 Obsidianをダウンロードする</a></li>
+<li><a href="#2-2-vault">2-2 Vaultを作る</a></li>
+<li><a href="#2-3-6">2-3 基本フォルダ6つを作る</a></li>
+<li><a href="#2-4">2-4 デイリーノート機能をオンにする</a></li>
+<li><a href="#2-5-ai">2-5 テンプレートとAIコンテキストノートを置く</a></li>
+<li><a href="#2-6">2-6 動作確認</a></li>
+</ul>
+</li>
+<li><a href="#3">3. 設定ファイル・テンプレの全文</a><ul>
+<li><a href="#_3">フォルダ構成(できあがりの全体像)</a></li>
+<li><a href="#90_templatesmd">デイリーノートのテンプレート(90_Templates/デイリーノート.md)</a></li>
+<li><a href="#aivaultaimd">AIコンテキストノート(Vault直下にAIコンテキスト.mdとして保存)</a></li>
+</ul>
+</li>
+<li><a href="#4-3">4. 動作確認の3項目</a></li>
+<li><a href="#5-ai20269">5. 最新AI(2026年9月時点)での変わり目(取得日つき)</a></li>
+<li><a href="#6">6. 次の一手</a></li>
+<li><a href="#_4">最初に投げるプロンプト</a><ul>
+<li><a href="#_5">フォルダ構成を自分用に微調整するプロンプト</a></li>
+<li><a href="#ai">AIコンテキストノートを埋めるプロンプト</a></li>
+</ul>
+</li>
+<li><a href="#7">よくある失敗 7つと直し方</a></li>
+<li><a href="#_6">安全に使うための注意</a></li>
+<li><a href="#_7">つまずいたときに聞くプロンプト</a></li>
+<li><a href="#_8">用語集</a></li>
+<li><a href="#10">出す前の品質チェック(10項目)</a></li>
+<li><a href="#_9">最終チェックリスト</a></li>
+</ul>
+</div>
+</div>
+<div class='body'><h1 id="obsidian">第二の脳 Obsidian 初期設定テンプレ</h1>
+<blockquote>
+<p>ノートアプリ「Obsidian」に、フォルダ構成・デイリーノート・AIに読ませる1枚をコピーで入れて、今日中に「書けば貯まる」状態にします。難しい設定は一切ありません。</p>
+</blockquote>
+<h2 id="_1">はじめに</h2>
+<p>わどです。この特典は、AIで収益を上げるための土台づくりです。土台というのは、ノートを書く場所のことです。</p>
+<p>多くの人は、思いついたことをメモアプリ・チャットの下書き・頭の中に散らばらせたまま作業しています。この状態だと、AIに何かを頼むたびに「えーと、状況を説明すると……」から始めることになります。毎回ゼロから説明する時間も、説明の抜け漏れがそのまま出力の質に響くのも無駄です。</p>
+<p>Obsidianは、パソコンの中の1つのフォルダ(これを「Vault(ボールト)」と呼びます)にMarkdown形式のテキストファイルを貯めていくノートアプリです。特別なのは、ノートとノートを<code>[[ ]]</code>でつなげられることと、ファイルが全部あなたのパソコンの中にあることです。クラウドのサービスが終了しても、メモは手元に残ります。</p>
+<p>このページには、フォルダ構成・デイリーノートのテンプレート・AIに最初に読ませる1枚(以下「AIコンテキストノート」)の3つを、そのままコピーして使える形で載せています。今日やることは、Obsidianを入れて、この3つを置くところまでです。</p>
+<h2 id="_2">この特典の進め方</h2>
+<p>上から順番に進めてください。3章の「設定ファイル・テンプレの全文」は、読むだけでなく実際にコピーして自分のVaultに置く章です。ここを飛ばすと、あとの章が前提にしている置き場所ができません。前提は、パソコン(Mac・Windowsどちらでも可)と、Obsidianを無料でダウンロードできるネット接続だけです。プログラミングの知識は不要です。</p>
+<h2 id="1">最初のゴール(今日やる1つ)</h2>
+<p>今日のゴールは1つだけです。</p>
+<p><strong>Obsidianを開き、デイリーノートを1つ作り、そこに今日やったことを3行書く。</strong></p>
+<p>これができれば、「書けば貯まる」の1日目が完成した状態です。フォルダ構成やAIコンテキストノートは、時間がなければ明日以降に回しても構いません。</p>
+<h2 id="1_1">1. 何を先に入れるか(順番と理由)</h2>
+<p>Vaultを作った直後、全部を一度に完璧にしようとすると手が止まります。次の順番で進めてください。</p>
+<div class='tbl'><table>
+<thead>
+<tr>
+<th>順番</th>
+<th>入れるもの</th>
+<th>なぜこの順番か</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Vault本体(空のフォルダ)</td>
+<td>すべての置き場所の土台。ここがないと何も始まらない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>基本フォルダ6つ</td>
+<td>迷ったときに「どこに置くか」で止まらないようにする</td>
+</tr>
+<tr>
+<td>3</td>
+<td>デイリーノートの設定とテンプレート</td>
+<td>毎日開く場所を先に作ると、書く習慣がついてから整理を覚えられる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>AIコンテキストノート</td>
+<td>中身がまだ薄くても先に器を作る。使いながら育てるものなので、完璧を待たない</td>
+</tr>
+<tr>
+<td>5</td>
+<td>実際の案件フォルダ(noteの連載、Instagramの投稿ネタ、Xの下書きなど)</td>
+<td>器ができてから、今動いている活動を移す。最初から全部を移そうとしない</td>
+</tr>
+</tbody>
+</table></div>
+<p>つまずくのは、順番を逆にして「まず完璧な分類を考えてから書き始めよう」とするときです。分類は、書いたものが増えてから見えてきます。</p>
+<h2 id="2-1">2. 手順(画面ごとに1行・つまずきやすい所に注記)</h2>
+<p>所要時間はおよそ20分です。</p>
+<h3 id="2-1-obsidian">2-1 Obsidianをダウンロードする</h3>
+<p>公式サイトから、お使いのOS(Mac・Windows)向けのインストーラーをダウンロードし、実行します。無料で使えます。案内に従って進めれば、特別な設定は不要です。</p>
+<p><strong>つまずきやすい所</strong>: 会社支給のパソコンで「管理者権限がない」と表示される場合は、個人のパソコンで進めるか、情報システム担当に相談してください。</p>
+<h3 id="2-2-vault">2-2 Vaultを作る</h3>
+<p>起動すると「新しいVaultを作成」という選択肢が出ます。名前を決めて(例: <code>MyVault</code>)、保存場所は「デスクトップ」か「書類」フォルダの直下を選んでください。</p>
+<p><strong>つまずきやすい所</strong>: 「既存フォルダを開く」を間違って選ぶと、既にあるフォルダの中身が全部ノートとして読み込まれます。初めては必ず「新しいVaultを作成」を選んでください。</p>
+<h3 id="2-3-6">2-3 基本フォルダ6つを作る</h3>
+<p>Vaultの左側にある「ファイル一覧」の上で右クリックし、「新規フォルダ」を選んで、次の6つを作ります。名前は半角英数字と数字にすると、あとで並び順が崩れません。</p>
+<pre><code>00_Daily
+01_Inbox
+02_Projects
+03_Knowledge
+90_Templates
+assets
+</code></pre>
+<p><strong>つまずきやすい所</strong>: フォルダ名の先頭に数字を付けているのは、並び順をコントロールするためです。数字を付けないと、フォルダがアルファベット順にバラバラに並びます。</p>
+<h3 id="2-4">2-4 デイリーノート機能をオンにする</h3>
+<p>左下の歯車アイコン(設定)を開き、「コア機能」の一覧から「デイリーノート」をオンにします。設定項目が増えるので、次のように入力します。</p>
+<ul>
+<li>日付の形式: <code>YYYY-MM-DD</code></li>
+<li>新規ファイルの場所: <code>00_Daily</code></li>
+<li>テンプレートファイルの場所: <code>90_Templates/デイリーノート</code></li>
+</ul>
+<p><strong>つまずきやすい所</strong>: テンプレートファイルの場所は、まだファイルを作っていないので、この時点ではエラーのような表示になりますが問題ありません。次の3章でファイルを作れば反映されます。</p>
+<h3 id="2-5-ai">2-5 テンプレートとAIコンテキストノートを置く</h3>
+<p>3章にある2つのテンプレートをコピーし、それぞれ指定のフォルダに新規ファイルとして貼り付けます。手順は「新規ノートを作る→ファイル名を付ける→中身を貼り付ける→保存」の4手だけです。</p>
+<h3 id="2-6">2-6 動作確認</h3>
+<p>左上のカレンダーアイコン(または指定したショートカット)から、今日のデイリーノートを開きます。テンプレートの内容が自動で入っていれば成功です。4章の3項目で最終確認します。</p>
+<h2 id="3">3. 設定ファイル・テンプレの全文</h2>
+<p>ここからは、コピーしてそのまま使える完成形です。3つとも、あなたの言葉に埋め替えて使ってください。</p>
+<h3 id="_3">フォルダ構成(できあがりの全体像)</h3>
+<pre><code>MyVault/
+├── 00_Daily/              ← 毎日のデイリーノート。日付名のファイルが自動で増える
+├── 01_Inbox/               ← 迷ったら、とりあえずここに置く。あとで振り分ける
+├── 02_Projects/            ← 今動いている活動ごとのフォルダ
+│   ├── note連載/
+│   ├── Instagram投稿ネタ/
+│   └── X下書き/
+├── 03_Knowledge/           ← 決まったこと・学んだこと(あとで見返す前提)
+├── 90_Templates/           ← テンプレート置き場
+│   └── デイリーノート.md
+├── assets/                 ← 画像・スクリーンショットなどの添付
+└── AIコンテキスト.md        ← Vault直下に置く。AIに最初に読ませる1枚
+</code></pre>
+<p><code>02_Projects</code>の中身は例です。あなたが実際に動かしている活動に合わせて名前を変えてください。noteやBrainで記事の連載をしているなら<code>note連載</code>、Instagramのストーリーズを回しているなら<code>Instagram投稿ネタ</code>、Xで発信しているなら<code>X下書き</code>というように、今の活動をそのままフォルダ名にすると迷いません。</p>
+<h3 id="90_templatesmd">デイリーノートのテンプレート(<code>90_Templates/デイリーノート.md</code>)</h3>
+<pre><code class="language-markdown">---
+date: {{date}}
+---
+# {{date:YYYY-MM-DD}}
+
+## 今日のゴール(1つだけ)
+-
+
+## やったこと
+-
+
+## 学び・気づき
+-
+
+## 明日やること
+-
+
+## メモ・思いついたこと
+-
+</code></pre>
+<p><code>{{date}}</code>は、デイリーノート機能が自動で今日の日付に置き換えます。手で書き換える必要はありません。「今日のゴール(1つだけ)」は、1つに絞るのが大事です。複数書くと結局どれも終わりません。</p>
+<h3 id="aivaultaimd">AIコンテキストノート(Vault直下に<code>AIコンテキスト.md</code>として保存)</h3>
+<p>この特典でいちばん大事な1枚です。AIに何かを頼むとき先に貼るか、Claude Codeのような「フォルダを直接読めるAI」なら起動時に読ませます。毎回の状況説明が要らなくなります。</p>
+<pre><code class="language-markdown"># このVaultについて(AIに最初に読んでほしい1枚)
+
+## 私は誰か
+- 名前/屋号:
+- やっていること(1行で):
+- 得意なこと:
+- 今、力を入れていること:
+
+## このVaultの歩き方
+- 00_Daily: 日々の記録。いちばん新しい状況はここにある
+- 01_Inbox: まだ整理していないメモ。事実として扱わないこと
+- 02_Projects: 今動いている活動。フォルダ名がそのまま活動名
+- 03_Knowledge: 確定した知識・ルール。他と矛盾したらこちらを優先すること
+
+## 今のゴール(3ヶ月以内)
+-
+
+## 私の言葉づかい・トーン
+- 一人称:
+- よく使う言い回し:
+- 使わない言葉・NG表現:
+
+## 実績・数字(実在するものだけ。日付つきで)
+-
+
+## AIへのお願い
+- 数字・実績は、ここに書いていないものを新しく作らないこと
+- 分からないことは「不明」と書いて、想像で埋めないこと
+- 情報が古い/矛盾している場合は、03_Knowledgeを優先すること
+</code></pre>
+<p>「AIへのお願い」の3行は削らないでください。この3行があるかどうかで、AIが数字や実績を勝手に作ってしまう確率が大きく変わります。実績・数字は必ず実在するものだけを書いてください。ここに嘘が入ると、以降このファイルを読んだすべてのAIの出力に、その嘘が乗ります。</p>
+<h2 id="4-3">4. 動作確認の3項目</h2>
+<p>3つとも通れば、今日の設定は完了です。</p>
+<ol>
+<li><strong>デイリーノートが自動で作られるか</strong>: カレンダーアイコンから今日のノートを開き、テンプレートの見出しが自動で入っているか確認する</li>
+<li><strong>AIコンテキストノートをAIに読ませられるか</strong>: 中身をコピーしてAI(ChatGPT・Gemini・Claudeのいずれか)に貼り、「このVaultについて、あなたが理解したことを3行で要約してください」と聞き、書いた内容とズレていないか確認する</li>
+<li><strong>リンクでノート同士がつながるか</strong>: どこかのノートに<code>[[AIコンテキスト]]</code>と書いてみて、クリックすると該当のノートに飛ぶか確認する</li>
+</ol>
+<p>3番目が動けば、Obsidianの一番の強み(ノートを線でつなげること)が使えています。</p>
+<h2 id="5-ai20269">5. 最新AI(2026年9月時点)での変わり目(取得日つき)</h2>
+<p>ここは、Vaultの運用そのものが今後どう変わっていくかの話です。取得日は2026年9月6日です。</p>
+<p>2026年9月3日(米国時間)、OpenAIが新しいモデル「GPT-6 Astra」を発表しました。このモデルの目玉は「コンピューター操作」です。画面に表示されている情報を読み取り、承認されたアプリを人間と同じように操作できるとされています。将来的には、Obsidianの画面を直接見ながらフォルダを整理したり、デイリーノートを代わりに埋めたりするAIの使い方が広がっていく可能性があります。</p>
+<p>ただし注意点も一緒に発表されています。画面の内容が不完全だったり、AIの行動に影響を与えるよう仕込まれていたりする可能性があるという指摘です。AIに画面を直接触らせるときは「何を見せるか」を選ぶ必要があります。Vaultに他人の個人情報や認証情報を置かない安全ルール(後述)は、この変化があるからこそ大事になります。</p>
+<p>現時点では、この特典どおりに手で設定し、AIには「AIコンテキスト.md」を読ませて文章を作ってもらう使い方から始めてください。画面操作そのものをAIに任せるのは、提供が広がってからで十分です。</p>
+<p>Claude Codeのようにフォルダを直接読み書きできるAIを使っている場合は、起動時にAIコンテキスト.mdを自動で読ませる設定にすると、この章の話がそのまま実践できます。導入は特典《Claude Code 最初の30分》に、AIに「担当」を持たせる考え方は特典《AI社員1人目のつくり方》にまとめてあります。</p>
+<h2 id="6">6. 次の一手</h2>
+<p>このVaultは、AIで成果を上げるための「置き場」です。稼ぎ方より稼ぐ順番でいうと、STEP1(最初の1件を受ける土台)からSTEP3(SNS・ローンチで広げる)まで、全工程の下敷きになります。noteやBrainの記事の下書き、Instagramのストーリーズのネタ、Xの投稿の下書き、どれも<code>02_Projects</code>の下に置けば散らかりません。</p>
+<p>面談では、あなた専用の1枚(特注のロードマップ)を一緒に作ります。</p>
+<h2 id="_4">最初に投げるプロンプト</h2>
+<p>自分で埋めるのが難しい場合は、次の2つのプロンプトを使ってください。ChatGPT・Gemini・Claudeのどれに投げても構いません。</p>
+<h3 id="_5">フォルダ構成を自分用に微調整するプロンプト</h3>
+<pre><code>あなたはノート整理の設計者です。
+私の活動を教えるので、Obsidianのフォルダ構成を私向けに微調整してください。
+
+## 私の情報
+- やっていること:【 】
+- 今動いている活動の種類:【例: note連載、Instagram運用、コンサル】
+- 今後増えていきそうな活動:【 】
+
+## ベースの構成
+00_Daily / 01_Inbox / 02_Projects / 03_Knowledge / 90_Templates / assets
+
+## やってほしいこと
+1. 02_Projectsの中に作るべきサブフォルダ案を3〜5個提案してください
+2. 増やしすぎない理由も1行で添えてください(フォルダは少ないほど続きます)
+3. 03_Knowledgeをさらに分けるべきかどうか判断してください
+
+## ルール
+- フォルダの階層は3階層までに抑えること
+- 私が伝えていない活動を勝手に想像して追加しないこと
+</code></pre>
+<h3 id="ai">AIコンテキストノートを埋めるプロンプト</h3>
+<pre><code>あなたは、AIに私の状況を伝えるための「紹介文」を作る担当です。
+これから質問するので、1問ずつ順番に聞いてください(まとめて聞かないこと)。
+
+質問する項目:
+1. 名前/屋号と、やっていることを1行で
+2. 得意なこと
+3. 今、力を入れていること
+4. 3ヶ月以内のゴール
+5. 普段の言葉づかい(一人称・よく使う言い回し・使わない言葉)
+6. 実績・数字(実在するものだけ。ない場合は「まだない」と答えてよい)
+
+すべて聞き終わったら、以下の見出しに沿って「AIコンテキスト.md」の中身を作ってください。
+
+- 私は誰か
+- このVaultの歩き方(これは固定文なので、そのまま使ってください)
+- 今のゴール(3ヶ月以内)
+- 私の言葉づかい・トーン
+- 実績・数字(実在するものだけ。日付つきで)
+- AIへのお願い(これも固定文です。そのまま使ってください)
+
+ルール:
+- 私が答えていない実績・数字を作らないこと
+- 「まだない」と答えた項目は、空欄のまま残すこと。埋めるふりをしないこと
+</code></pre>
+<h2 id="7">よくある失敗 7つと直し方</h2>
+<div class='tbl'><table>
+<thead>
+<tr>
+<th>#</th>
+<th>失敗</th>
+<th>直し方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Vaultを2つ以上作ってしまい、どちらに書いたか分からなくなる</td>
+<td>1つのVaultに統一する。もう一方の中身は<code>01_Inbox</code>にコピーして、あとで振り分ける</td>
+</tr>
+<tr>
+<td>2</td>
+<td>クラウド同期(iCloudなど)で「競合コピー」というファイルが増える</td>
+<td>同時に複数の端末で同じファイルを開かない。編集を終えたら閉じる習慣をつける</td>
+</tr>
+<tr>
+<td>3</td>
+<td>デイリーノートを開いてもテンプレートの中身が入らない</td>
+<td>設定の「テンプレートファイルの場所」が、実際に置いた場所と一字一句合っているか確認する</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>01_Inbox</code>が溜まる一方で振り分けられない</td>
+<td>週に1回、決まった曜日に「Inboxを空にする10分」をカレンダーに入れる</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ノート同士をリンクせず、孤立したメモばかりになる</td>
+<td>関連する内容を思いついたら、その場で<code>[[ノート名]]</code>で1本つなげる習慣にする</td>
+</tr>
+<tr>
+<td>6</td>
+<td>AIコンテキストノートを作ったきり、二度と更新しない</td>
+<td>ゴールが変わったとき・実績が増えたときを更新のタイミングと決めておく</td>
+</tr>
+<tr>
+<td>7</td>
+<td>フォルダを増やしすぎて、どこに置くか毎回迷う</td>
+<td>基本の6フォルダを崩さない。増やすのは<code>02_Projects</code>のサブフォルダだけにする</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="_6">安全に使うための注意</h2>
+<ul>
+<li>実績・数字は、実在するものだけを書いてください。AIコンテキストノートに嘘が入ると、そのあとの全部の出力に嘘が乗ります</li>
+<li>クライアントや第三者の個人情報・連絡先を、Vaultに書き込まないでください</li>
+<li>パスワード・APIキーなど認証情報は、Vaultの中に置かないでください。AIに読ませる前提の場所には、公開されても困らない情報だけを置くのが原則です</li>
+<li>クラウド同期を使う場合、複数の端末で同時に同じファイルを開いて編集しないでください。内容が競合して壊れることがあります</li>
+<li>「必ず」「絶対」「誰でも」といった言い切り表現は、AIコンテキストノートの中に混ぜないでください。AIが出す文章にもそのまま影響します</li>
+<li>出てきた文章やまとめは、必ず自分の目で確認してから使ってください。AIの出力をそのまま公開・配信しないこと</li>
+</ul>
+<h2 id="_7">つまずいたときに聞くプロンプト</h2>
+<p>そのままコピーしてAIに聞いてください。</p>
+<pre><code>今、私がやろうとしている設定はこれです。
+【ここに、今つまずいている手順を書く】
+
+うまくいかない状態はこうです。
+【ここに、実際に起きていることを書く】
+
+専門用語を使わずに、原因と、次に私が確認すべきことを1つだけ教えてください。
+</code></pre>
+<pre><code>ここまでの設定のうち、どこまで終わっていて、どこからやり直せばいいか整理してください。
+</code></pre>
+<h2 id="_8">用語集</h2>
+<div class='tbl'><table>
+<thead>
+<tr>
+<th>用語</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vault(ボールト)</td>
+<td>Obsidianがノートを保存する、1つのフォルダ全体のこと</td>
+</tr>
+<tr>
+<td>デイリーノート</td>
+<td>日付ごとに自動で作られる、毎日書くためのノート</td>
+</tr>
+<tr>
+<td>テンプレート</td>
+<td>新しいノートを作るときに、自動で入る雛形の中身</td>
+</tr>
+<tr>
+<td>Inbox(インボックス)</td>
+<td>どこに置くか迷ったメモを、とりあえず入れておく場所</td>
+</tr>
+<tr>
+<td>双方向リンク</td>
+<td><code>[[ノート名]]</code>で他のノートとつなげる仕組み</td>
+</tr>
+<tr>
+<td>AIコンテキストノート</td>
+<td>AIに最初に読ませる、あなたと活動の紹介文をまとめた1枚</td>
+</tr>
+<tr>
+<td>コア機能</td>
+<td>Obsidianに最初から入っている、オンオフを切り替えられる機能のこと</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10">出す前の品質チェック(10項目)</h2>
+<ol>
+<li>Vaultは1つに統一されているか(2つ以上に分かれていないか)</li>
+<li>フォルダ構成は3階層以内に収まっているか</li>
+<li>デイリーノートを開くと、テンプレートの内容が自動で入るか</li>
+<li>AIコンテキストノートの実績欄が、実在するものだけになっているか</li>
+<li>Vaultの中にパスワード・APIキーなどの認証情報が置かれていないか</li>
+<li>同期設定が原因の「競合コピー」ファイルが残っていないか</li>
+<li><code>[[ ]]</code>のリンクをクリックして、実際に該当ノートへ飛べるか</li>
+<li>誤字脱字・文字化けがないか</li>
+<li>週1回のInbox整理予定が、自分のカレンダーに入っているか</li>
+<li>AIコンテキストノートをAIに読ませて、要約してもらった結果が実態とズレていないか</li>
+</ol>
+<h2 id="_9">最終チェックリスト</h2>
+<ul>
+<li>[ ] Obsidianをインストールし、Vaultを1つ作った</li>
+<li>[ ] 基本フォルダ6つ(<code>00_Daily</code> <code>01_Inbox</code> <code>02_Projects</code> <code>03_Knowledge</code> <code>90_Templates</code> <code>assets</code>)を作った</li>
+<li>[ ] デイリーノート機能をオンにし、テンプレートを反映させた</li>
+<li>[ ] 今日のデイリーノートに、やったことを3行書いた(今日のゴール達成)</li>
+<li>[ ] AIコンテキスト.mdをVault直下に置き、少なくとも半分埋めた</li>
+<li>[ ] AIコンテキスト.mdをAIに読ませ、要約が実態と合っているか確認した</li>
+<li>[ ] 動作確認の3項目(デイリーノート・AIに読ませる・リンク)を通した</li>
+<li>[ ] 週1回のInbox整理予定を、自分のカレンダーに入れた</li>
+<li>[ ] 出す前の品質チェック(10項目)を通した</li>
+</ul></div>
+<nav class='pn'>
+<span>（最初の特典）</span>
+<a href='../bonus-N08/'>X ポスト量産 OS わど版 →</a>
+</nav></article></main>
+<footer class='site'><div class='wrap'><p>この特典は受け取り条件を満たした方向けに配布しています。再配布・転載はご遠慮ください。</p><p>記載の売上・成果は特定の実績であり、同様の成果を保証するものではありません。</p></div></footer></body></html>
